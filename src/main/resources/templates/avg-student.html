@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Average Students Per Defense</title>
+  <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div>
+  <h2>Search Average Students Per Defense</h2>
+  <form id="calculateAverageForm">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+
+    <button type="submit">Calculate Average</button>
+  </form>
+  <ul id="averageResult"></ul>
+</div>
+
+<div class="controlBtn">
+  <button id="logoutBtn">Log Out</button>
+  <button onclick="window.history.back()">Go to Back</button>
+</div>
+
+<script src="/static/js/avg-stud.js" th:src="@{/js/avg-stud.js}"></script>
+
+</body>
+</html>

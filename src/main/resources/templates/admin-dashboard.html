@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Welcome to Admin Dashboard</h1>
+
+<!-- Manage Users -->
+<div>
+  <h2>Manage Users</h2>
+  <form id="createUserForm">
+    <label for="userName">Username:</label>
+    <input type="text" id="userName" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="userRole">Role:</label>
+    <select id="userRole" name="role" onchange="toggleRoleFields()">
+      <option value="STUDENT">Student</option>
+      <option value="TEACHER">Teacher</option>
+      <option value="DEP">Head of Department</option>
+      <option value="ADMIN">Admin</option>
+    </select>
+
+    <!-- Manage Teachers -->
+    <div id="teacherFields" style="display: none;">
+        <h3>Teacher</h3>
+        <label for="teacherName">Teacher Name:</label>
+        <input type="text" id="teacherName" name="name">
+
+        <label for="teacherPosition">Position:</label>
+        <select id="teacherPosition" name="position">
+            <option value="ASSISTANT">Assistant</option>
+            <option value="SENIOR_ASSISTANT">Senior Assistant</option>
+            <option value="ASSOCIATE_PROFESSOR">Associate Professor</option>
+            <option value="PROFESSOR">Professor</option>
+        </select>
+
+        <label for="teacherDepartment">Department:</label>
+        <select id="teacherDepartment" name="department"></select>
+
+    </div>
+
+    <!-- Manage Students -->
+    <div id="studentFields" style="">
+        <h3>Student</h3>
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="name" required>
+
+        <label for="studentFacultyNumber">Faculty Number:</label>
+        <input type="text" id="studentFacultyNumber" name="facultyNumber" maxlength="8" required>
+
+        <label for="studentDepartment">Department:</label>
+        <select id="studentDepartment" name="department"></select>
+
+    </div>
+
+    <button type="submit">Create User</button>
+  </form>
+
+  <button class="queryBtn" id="viewTeachersBtn" onclick="window.location.href='users-all.html';">View All Users</button>
+</div>
+
+
+
+<!-- Manage Departments -->
+<div>
+  <h2>Manage Departments</h2>
+  <form id="createDepartmentForm">
+    <label for="departmentName">Department Name:</label>
+    <input type="text" id="departmentName" name="name" required>
+    <button type="submit">Create Department</button>
+  </form>
+
+
+</div>
+
+<!-- Control Buttons -->
+<div class="controlBtn">
+  <button id="logoutBtn">Log Out</button>
+  <button onclick="window.location.href='../templates/assignments-dashboard.html';">Go to Assignment Dashboard</button>
+</div>
+
+<script src="/static/js/admin.js" th:src="@{/js/admin.js}"></script>
+
+</body>
+</html>

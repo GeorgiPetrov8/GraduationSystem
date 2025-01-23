@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma Assignments Dashboard</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Diploma Assignments Dashboard</h1>
+
+<!-- View Approved Assignments -->
+<div>
+    <h2>Approved Assignments</h2>
+    <button class="assBtn" id="fetchApprovedAssignmentsBtn" onclick="window.location.href='../templates/approved.html';">View Approved Assignments</button>
+
+    <!-- View Assignments by Supervisor -->
+    <h2>Assignments Approved by Supervisor</h2>
+    <button class="assBtn" id="fetchApprovedAssignmentsSupervisorBtn" onclick="window.location.href='../templates/approved-supervisor.html';">Assignments Approved by Supervisor</button>
+
+    <!-- Get Graduated Students -->
+    <h2>Get Graduated Students</h2>
+    <button class="assBtn" id="fetchGraduatedBtn" onclick="window.location.href='../templates/graduated.html';">Get Graduated Students</button>
+
+    <!-- Get Defenses by Grade Range -->
+    <h2>Defenses by Grade Range</h2>
+    <button class="assBtn" id="fetchDefensesByGradeBtn" onclick="window.location.href='../templates/defense-grade.html';">Defenses by Grade Range</button>
+
+    <!-- Search Thesis by Title -->
+    <h2>Search Thesis by Title</h2>
+    <button class="assBtn" id="fetchThesisTitleBtn" onclick="window.location.href='../templates/thesis-title.html';">Search Thesis by Title</button>
+
+    <!-- Avg Students Per Defense -->
+    <h2>Search Thesis by Title</h2>
+    <button class="assBtn" id="AvgStudentBtn" onclick="window.location.href='../templates/avg-student.html';">Search Average Students Per Defense</button>
+
+</div>
+
+<!-- Count Negative Reviews -->
+<div>
+    <h2>Count of Negative Reviews</h2>
+    <button class="queryBtn" id="countNegativeReviewsBtn">Count Negative Reviews</button>
+    <p id="negativeReviewsCount"></p>
+</div>
+
+<!-- Count Successful Defenses by Teacher -->
+<div>
+    <h2>Successful Defenses by Teacher</h2>
+    <form id="teacherDefenseForm">
+        <label for="teacherId">Teacher ID:</label>
+        <input type="number" id="teacherId" name="teacherId" required>
+        <button type="submit">Get Count</button>
+    </form>
+    <p id="successfulCount"></p>
+</div>
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.history.back()">Go to Back</button>
+</div>
+
+<script src="/static/js/assignment.js" th:src="@{/js/assignment.js}"></script>
+
+</body>
+</html>

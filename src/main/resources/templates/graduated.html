@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduated Students</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div>
+    <h2>Get Graduated Students</h2>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate">
+    <button class="queryBtn" id="getGraduatedBtn">Get Graduated Students</button>
+    <ul id="graduatedStudentsList"></ul>
+</div>
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.history.back()">Go to Back</button>
+</div>
+
+<script src="/static/js/graduated.js" th:src="@{/js/graduated.js}"></script>
+
+</body>
+</html>

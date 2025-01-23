@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defenses By Grade</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div>
+    <h2>Defenses by Grade Range</h2>
+    <form id="gradeRangeForm">
+        <label for="minGrade">Minimum Grade:</label>
+        <input type="number" step="0.01" min="2" max="6" id="minGrade" name="minGrade" required>
+        <label for="maxGrade">Maximum Grade:</label>
+        <input type="number" step="0.01" min="2" max="6" id="maxGrade" name="maxGrade" required>
+        <button type="submit">View Defenses</button>
+    </form>
+    <ul id="defensesList"></ul>
+</div>
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.history.back()">Go to Back</button>
+</div>
+
+<script src="/static/js/defense.js" th:src="@{/js/defense.js}"></script>
+
+</body>
+</html>

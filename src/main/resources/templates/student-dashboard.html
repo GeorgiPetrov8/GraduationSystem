@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<h1>Welcome to Student Dashboard</h1>
+
+<!-- View My Assignments -->
+<div>
+    <h2>View My Assignments</h2>
+    <label for="facultyNumberId">Student's Faculty Number:</label>
+    <input type="text" id="facultyNumberId" name="facultyNumberId" maxlength="8" required>
+    <button class="queryBtn" id="viewMyAssignmentsBtn">View My Assignments</button>
+    <ul id="myAssignmentsList"></ul>
+</div>
+
+<!-- Submit Thesis -->
+<div>
+    <h2>Submit Thesis</h2>
+    <form id="submitThesisForm">
+        <label for="thesisTitle">Thesis Title:</label>
+        <input type="text" id="thesisTitle" name="thesisTitle" required>
+        <label for="facultyNumber">Student's Faculty Number:</label>
+        <input type="text" id="facultyNumber" name="facultyNumber" maxlength="8" required>
+        <label for="thesisContent">Thesis Content:</label>
+        <textarea id="thesisContent" name="thesisContent" required></textarea>
+        <button type="submit">Submit Thesis</button>
+    </form>
+</div>
+
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.location.href='../templates/assignments-dashboard.html';">Go to Assignment Dashboard</button>
+</div>
+
+<script src="/static/js/student.js" th:src="@{/js/student.js}"></script>
+</body>
+</html>

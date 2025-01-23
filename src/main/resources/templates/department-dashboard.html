@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Dashboard</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Welcome to Teacher Dashboard</h1>
+
+<!-- View Assignments By Number -->
+<div>
+    <h2>View Assignments By Faculty Number</h2>
+    <label for="facultyNumber">Student's Faculty Number:</label>
+    <input type="text" id="facultyNumber" name="facultyNumber" maxlength="8" required>
+    <button class="queryBtn" id="viewAssignmentsBtn">View Assignments By Faculty Number</button>
+    <ul id="assignmentsList"></ul>
+</div>
+
+<!-- Approve/Disapprove Assignment -->
+<div>
+    <h2>Approve/Disapprove Assignment</h2>
+    <label for="assignmentId">Assignment ID:</label>
+    <input type="number" id="assignmentId" required>
+    <button id="approveAssignmentBtn">Approve</button>
+    <button id="disapproveAssignmentBtn">Disapprove</button>
+</div>
+
+<!-- View Defenses By Number -->
+<div>
+    <h2>View Defenses By Faculty Number</h2>
+    <label for="facultyNumberId">Student's Faculty Number:</label>
+    <input type="text" id="facultyNumberId" name="facultyNumberId" maxlength="8" required>
+    <button class="queryBtn" id="viewDefensesBtn">View Defenses By Faculty Number</button>
+    <ul id="defensesList"></ul>
+</div>
+
+<!-- Assign Grades -->
+<div>
+    <h2>Assign Grades</h2>
+    <form id="assignGrade">
+        <label for="defenseId">Defense ID:</label>
+        <input type="number" id="defenseId" required>
+        <label for="grade">Grade:</label>
+        <input type="number" id="grade" step="0.01" min="2" max="6" required>
+        <button type="submit" id="assignGradeBtn">Assign Grade</button>
+    </form>
+</div>
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.location.href='../templates/assignments-dashboard.html';">Go to Assignment Dashboard</button>
+</div>
+
+<script src="/static/js/department.js" th:src="@{/js/department.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard</title>
+  <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<h1>Welcome to Teacher Dashboard</h1>
+
+<!-- Create Assignment -->
+<div>
+  <h2>Create Assignment</h2>
+  <form id="createAssignmentForm">
+    <label for="assignmentTitle">Title:</label>
+    <input type="text" id="assignmentTitle" name="title" required>
+    <label for="assignmentGoal">Goal:</label>
+    <input type="text" id="assignmentGoal" name="assignmentGoal" required>
+    <label for="assignmentTasks">Tasks:</label>
+    <input type="text" id="assignmentTasks" name="assignmentGoal" required>
+    <label for="assignmentTechnologies">Technologies:</label>
+    <input type="text" id="assignmentTechnologies" name="assignmentTechnologies" required>
+    <label for="assignmentStudents">Student's faculty number:</label>
+    <input type="text" id="assignmentStudents" name="assignmentStudents" maxlength="8" required>
+    <button type="submit">Create Assignment</button>
+
+  </form>
+</div>
+
+<!-- Submit Review -->
+<div>
+  <h2>Submit Review</h2>
+  <form id="submitReviewForm">
+    <label for="facultyNumberId">Student's Faculty Number:</label>
+    <input type="text" id="facultyNumberId" name="facultyNumberId" maxlength="8" required>
+    <label for="reviewContent">Content:</label>
+    <textarea id="reviewContent" name="content" required></textarea>
+    <label for="conclusion">Conclusion:</label>
+    <select id="conclusion" name="conclusion">
+      <option value="POSITIVE">Positive</option>
+      <option value="NEGATIVE">Negative</option>
+    </select>
+    <button type="submit">Submit Review</button>
+  </form>
+</div>
+
+<!-- Schedule Defense -->
+<div>
+  <h2>Schedule Defense</h2>
+  <form id="scheduleDefenseForm">
+    <label for="facultyNumber">Student's Faculty Number:</label>
+    <input type="text" id="facultyNumber" name="facultyNumber" maxlength="8" required>
+    <label for="defenseDate">Date:</label>
+    <input type="date" id="defenseDate" name="date" required>
+    <label for="studentDepartment">Department:</label>
+    <select id="studentDepartment" name="department"></select>
+
+    <button type="submit">Schedule Defense</button>
+  </form>
+</div>
+
+<div class="controlBtn">
+  <button id="logoutBtn">Log Out</button>
+  <button onclick="window.location.href='../templates/assignments-dashboard.html';">Go to Assignment Dashboard</button>
+</div>
+
+<script src="/static/js/teacher.js" th:src="@{/js/teacher.js}"></script>
+
+</body>
+</html>

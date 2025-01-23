@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+div {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea,
+select,
+input[type="date"] {
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+ul#graduatedStudentsList li {
+    background-color: #e1f5e1;
+}
+
+.queryBtn{
+    background-color: #2196F3;
+}
+
+.queryBtn:hover {
+    background-color: #1976D2;
+}
+
+form#submitThesisForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.assBtn{
+    width: 100%;
+    text-align: center;
+}
+
+#disapproveAssignmentBtn {
+    background-color: red;
+}
+
+#disapproveAssignmentBtn:hover {
+    background-color: #e10000;
+}
+
+.controlBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutBtn {
+    background-color: #333131;
+}
+
+#logoutBtn:hover {
+    background-color: #0056b3;
+}

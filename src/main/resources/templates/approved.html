@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense Dashboard</title>
+    <link href="/static/css/main.css" rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+
+<div>
+    <h2>Approved Assignments</h2>
+    <ul id="assignmentsList"></ul>
+</div>
+
+<div class="controlBtn">
+    <button id="logoutBtn">Log Out</button>
+    <button onclick="window.history.back()">Go to Back</button>
+</div>
+
+<script src="/static/js/approved.js" th:src="@{/js/approved.js}"></script>
+
+</body>
+</html>
