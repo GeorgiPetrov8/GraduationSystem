@@ -25,11 +25,11 @@ form.addEventListener('submit', async (e) => {
             if (role === 'ROLE_STUDENT') {
                 window.location.href = '../templates/student-dashboard.html';
             } else if (role === 'ROLE_TEACHER') {
-                window.location.href = '../../templates/teacher-dashboard.html';
+                window.location.href = '../templates/teacher-dashboard.html';
             } else if (role === 'ROLE_ADMIN') {
-                window.location.href = '../../templates/admin-dashboard.html';
+                window.location.href = '../templates/admin-dashboard.html';
             } else if (role === 'ROLE_DEP') {
-                window.location.href = '../../templates/department-dashboard.html';
+                window.location.href = '../templates/department-dashboard.html';
             }
 
         } else {

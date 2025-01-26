@@ -1,6 +1,7 @@
 package com.example.Graduation_System.data;
 
 import com.example.Graduation_System.data.enums.DiplomaStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -21,9 +22,11 @@ public class Department {
     private String name;
 
     @OneToMany(mappedBy = "department")
+    @JsonIgnore
     private Set<Student> students;
 
     @OneToMany(mappedBy = "department")
+    @JsonIgnore
     private Set<Teacher> teachers;
 
 }
